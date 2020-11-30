@@ -1,4 +1,4 @@
-package com.example.trekkin.ui.dashboard;
+package com.example.trekkin.ui.community;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.trekkin.R;
 
-public class DashboardFragment extends Fragment {
+public class CommunityFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private CommunityViewModel communityViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        communityViewModel =
+                new ViewModelProvider(this).get(CommunityViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_community, container, false);
+        final TextView textView = root.findViewById(R.id.text_notifications);
+        communityViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
