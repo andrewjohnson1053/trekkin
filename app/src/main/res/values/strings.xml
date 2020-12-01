@@ -12,20 +12,7 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="login_textview_text">Login</string>
-    <string name="email_textview_text">Email</string>
-    <string name="password_textview_hint">Password</string>
-    <string name="login_button_text">Login</string>
-    <string name="new_to_trekkin_register_here_textview_text">New to Trekkin? Register here</string>
-    <string name="registration_textview_header">Registration</string>
-    <string name="full_name_textview_text">Full Name</string>
-    <string name="email_address_textview_text">Email Address</string>
-    <string name="contact_textview_text">Contact</string>
-    <string name="phone_textview_hint">Phone</string>
-    <string name="password_textview_text">Password</string>
-    <string name="username_textview_text">Username</string>
-    <string name="register_button_text">Register</string>
-    <string name="registered_already_login_here_textview_text">Registered Already? Login here</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_community">Community</string>
+    <string name="title_account">Account</string>
 </resources>
