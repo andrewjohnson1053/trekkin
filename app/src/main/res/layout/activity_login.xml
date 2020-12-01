@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:text="@string/login_textview_text"
+        android:text="@string/login_top_textview_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="32sp"
         android:textStyle="bold"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/email_textview_text"
+        android:text="@string/email_textview_login_activity"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/textview_login_header" />
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:textSize="16sp"
-        android:text="@string/password_textview_hint"
+        android:text="@string/password_textview_login_activity"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="@string/new_to_trekkin_register_here_textview_text"
+        android:text="@string/new_to_trekkin_register_here_bottom_textview_text"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

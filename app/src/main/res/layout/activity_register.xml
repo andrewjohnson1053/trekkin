@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
-
     <TextView
         android:id="@+id/textview_registration_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/registration_textview_header"
+        android:text="@string/registration_top_textview_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -31,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/full_name_textview_text"
+        android:text="@string/full_name_textview_registration_activity"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textview_registration_header" />
 
@@ -50,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/email_address_textview_text"
+        android:text="@string/email_address_textview_registration_activity"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edittext_name_registration_activity" />
 
@@ -69,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/phone_textview_hint"
+        android:text="@string/phone_textview_registration_activity"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edittext_email_registration_activity" />
 
@@ -88,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/password_textview_text"
+        android:text="@string/password_textview_registration_activity"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edittext_phone_registration_activity" />
 
@@ -107,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/username_textview_text"
+        android:text="@string/username_textview_registration_activity"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edittext_password_registration_activity" />
 
@@ -121,25 +120,46 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textview_username_registration_activity" />
 
+    <TextView
+        android:id="@+id/textview_dob_registration_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/date_of_birth_textview_registration_activity"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_username_registration_activity" />
+
+    <EditText
+        android:id="@+id/edittext_dob_registration_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textview_dob_registration_activity" />
+
     <Button
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/register_button_text"
         android:padding="16dp"
+        android:text="@string/register_button_text"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_username_registration_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext_dob_registration_activity" />
 
     <TextView
         android:id="@+id/textview_bottom_registration_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="launchLoginActivity"
+        android:text="@string/registered_already_login_here_textview_registration_activity"
         android:textSize="18sp"
-        android:text="@string/registered_already_login_here_textview_text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_register"
-        android:onClick="launchLoginActivity"/>
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

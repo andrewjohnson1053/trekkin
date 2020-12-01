@@ -15,4 +15,18 @@
     <string name="title_explore">Explore</string>
     <string name="title_community">Community</string>
     <string name="title_account">Account</string>
+    <string name="new_to_trekkin_register_here_bottom_textview_text">New to Trekkin? Register here</string>
+    <string name="login_button_text">Login</string>
+    <string name="login_top_textview_header">Login</string>
+    <string name="email_textview_login_activity">Email</string>
+    <string name="password_textview_login_activity">Password</string>
+    <string name="registration_top_textview_header">Registration</string>
+    <string name="full_name_textview_registration_activity">Full name</string>
+    <string name="email_address_textview_registration_activity">Email Address</string>
+    <string name="phone_textview_registration_activity">Phone</string>
+    <string name="password_textview_registration_activity">Password</string>
+    <string name="username_textview_registration_activity">Username</string>
+    <string name="date_of_birth_textview_registration_activity">Date of Birth</string>
+    <string name="register_button_text">Register</string>
+    <string name="registered_already_login_here_textview_registration_activity">Registered Already? Login here</string>
 </resources>
