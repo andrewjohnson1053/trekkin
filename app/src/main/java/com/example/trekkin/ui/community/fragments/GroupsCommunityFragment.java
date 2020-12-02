@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +27,13 @@ public class GroupsCommunityFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_groups_community, container, false);
+
+        View root = inflater.inflate(R.layout.fragment_groups_community, container, false);
+        RecyclerView group_list = root.findViewById(R.id.groups_recycler_view);
+        group_list.setLayoutManager(new LinearLayoutManager(getContext()));
+        String[] groups = {"Group1", "Group2", "Group3"};
+        group_list.setAdapter(new ProgrammingAdapterGroups(groups));
+        return root;
     }
 
     @Override
