@@ -26,7 +26,26 @@ public class CommunityFragment extends Fragment {
         ViewPager viewPager = (ViewPager) root.findViewById(R.id.community_viewpager);
         viewPager.setAdapter(communitySectionAdapter);
         TabLayout tab_community = (TabLayout) root.findViewById(R.id.tab_community);
-        tab_community.setupWithViewPager(viewPager);
+        //tab_community.setupWithViewPager(viewPager);
+
+
+        tab_community.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_community));
         return root;
     }
 
