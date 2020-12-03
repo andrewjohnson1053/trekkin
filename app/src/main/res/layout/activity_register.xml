@@ -147,7 +147,8 @@
         android:padding="16dp"
         android:text="@string/register_button_text"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_dob_registration_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext_dob_registration_activity"
+        android:onClick="registerUser"/>
 
     <TextView
         android:id="@+id/textview_bottom_registration_activity"

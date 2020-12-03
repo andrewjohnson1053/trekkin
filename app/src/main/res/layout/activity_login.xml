@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/edittext_email_login_activity"
+        android:id="@+id/textview_email_login_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_login_header" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/edittext_email_login_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -47,7 +47,7 @@
         android:inputType="textEmailAddress"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_email_login_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_email_login_activity" />
 
     <TextView
         android:id="@+id/textview_password_login_activity"
@@ -57,10 +57,10 @@
         android:textSize="16sp"
         android:text="@string/password_textview_login_activity"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext_email_login_activity" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/edittext_password_login_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -78,7 +78,8 @@
         android:text="@string/login_button_text"
         android:padding="16dp"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        android:onClick="loginUser"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_password_login_activity" />
 
     <TextView
         android:id="@+id/textview_bottom_line"

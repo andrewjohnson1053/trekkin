@@ -34,4 +34,5 @@
     <string name="community_tab_groups">Groups</string>
     <string name="person_name_textview_text">Person Name</string>
     <string name="group_name_textview_text">Group Name</string>
+    <string name="logout_button_text">Logout</string>
 </resources>
