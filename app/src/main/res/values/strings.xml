@@ -32,4 +32,6 @@
     <string name="registered_already_login_here_textview_registration_activity">Registered Already? Login here</string>
     <string name="community_tab_friends">Friends</string>
     <string name="community_tab_groups">Groups</string>
+    <string name="person_name_textview_text">Person Name</string>
+    <string name="group_name_textview_text">Group Name</string>
 </resources>
