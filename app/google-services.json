@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "617838896835",
+    "project_id": "trekkin-final",
+    "storage_bucket": "trekkin-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617838896835:android:cca78b13e5417542966476",
+        "android_client_info": {
+          "package_name": "com.example.trekkin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617838896835-kjm3qbjp00fjcaomqr934vbhaa88mrgk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMYc7n7Cwst7OI5YM43t2eyFHIbBBi8Rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617838896835-kjm3qbjp00fjcaomqr934vbhaa88mrgk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
