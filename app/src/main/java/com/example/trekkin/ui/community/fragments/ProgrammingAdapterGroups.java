@@ -13,15 +13,17 @@ import com.example.trekkin.R;
 
 public class ProgrammingAdapterGroups extends RecyclerView.Adapter<ProgrammingAdapterGroups.ProgrammingViewHolderGroups> {
     private String[] data;
-    public ProgrammingAdapterGroups(String[] data){
+    private OnCommunityGroupItemClickListener mOnCommunityGroupItemClickListener;
+    public ProgrammingAdapterGroups(String[] data, OnCommunityGroupItemClickListener onCommunityGroupItemClickListener){
         this.data = data;
+        this.mOnCommunityGroupItemClickListener = onCommunityGroupItemClickListener;
     }
     @NonNull
     @Override
     public ProgrammingViewHolderGroups onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.list_item_layout_groups, parent, false);
-        return new ProgrammingViewHolderGroups(view);
+        return new ProgrammingViewHolderGroups(view, mOnCommunityGroupItemClickListener);
     }
 
     @Override
@@ -35,13 +37,25 @@ public class ProgrammingAdapterGroups extends RecyclerView.Adapter<ProgrammingAd
         return data.length;
     }
 
-    public class ProgrammingViewHolderGroups extends RecyclerView.ViewHolder{
+    public static class ProgrammingViewHolderGroups extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView textView;
-        public ProgrammingViewHolderGroups(@NonNull View itemView) {
+        OnCommunityGroupItemClickListener onCommunityGroupItemClickListener;
+        public ProgrammingViewHolderGroups(@NonNull View itemView, OnCommunityGroupItemClickListener onCommunityGroupItemClickListener) {
             super(itemView);
             imageView = itemView.findViewById(R.id.profile_icon_groups);
             textView = itemView.findViewById(R.id.person_name_groups);
+            this.onCommunityGroupItemClickListener = onCommunityGroupItemClickListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            onCommunityGroupItemClickListener.onItemClicked(getAdapterPosition());
+        }
+    }
+
+    public interface OnCommunityGroupItemClickListener{
+        void onItemClicked(int position);
     }
 }

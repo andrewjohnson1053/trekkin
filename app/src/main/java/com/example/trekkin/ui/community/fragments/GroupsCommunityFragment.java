@@ -10,13 +10,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.trekkin.R;
 
-public class GroupsCommunityFragment extends Fragment {
+public class GroupsCommunityFragment extends Fragment implements ProgrammingAdapterGroups.OnCommunityGroupItemClickListener {
 
     private GroupsCommunityViewModel mViewModel;
 
@@ -32,7 +34,7 @@ public class GroupsCommunityFragment extends Fragment {
         RecyclerView group_list = root.findViewById(R.id.groups_recycler_view);
         group_list.setLayoutManager(new LinearLayoutManager(getContext()));
         String[] groups = {"Group1", "Group2", "Group3"};
-        group_list.setAdapter(new ProgrammingAdapterGroups(groups));
+        group_list.setAdapter(new ProgrammingAdapterGroups(groups,this));
         return root;
     }
 
@@ -43,4 +45,8 @@ public class GroupsCommunityFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public void onItemClicked(int position) {
+        Log.d("COMM_GROUP", "onItemClicked: clicked " + position);
+    }
 }
