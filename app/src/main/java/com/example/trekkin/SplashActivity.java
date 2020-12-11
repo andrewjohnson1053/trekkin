@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1200;
+    private static int SPLASH_TIME_OUT = 2000;
 
 // variables
    // Animation logoanim, nameanim;

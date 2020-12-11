@@ -10,4 +10,14 @@
         android:layout_height="match_parent"
         android:text="Hello" />
 
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout_button_text"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"/>
+
 </FrameLayout>
