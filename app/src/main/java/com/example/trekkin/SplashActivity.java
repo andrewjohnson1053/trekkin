@@ -11,8 +11,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2000;
+    private FirebaseAuth auth;
 
 // variables
    // Animation logoanim, nameanim;
@@ -22,13 +26,19 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        auth = FirebaseAuth.getInstance();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(homeIntent);
+                FirebaseUser currentUser = auth.getCurrentUser();
+                if (currentUser == null){
+                    Intent homeIntent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(homeIntent);
+                }else{
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                }
                 finish();
             }
         },SPLASH_TIME_OUT);
