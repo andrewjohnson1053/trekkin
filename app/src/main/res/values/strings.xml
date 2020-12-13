@@ -35,4 +35,6 @@
     <string name="person_name_textview_text">Person Name</string>
     <string name="group_name_textview_text">Group Name</string>
     <string name="logout_button_text">Logout</string>
+    <string name="explore_favourite_tab">Favourite</string>
+    <string name="explore_suggested_tab">Suggested</string>
 </resources>

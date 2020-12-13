@@ -11,8 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.trekkin.R;
+import com.google.android.material.tabs.TabLayout;
 
 public class ExploreFragment extends Fragment {
 
@@ -23,11 +25,24 @@ public class ExploreFragment extends Fragment {
         exploreViewModel =
                 new ViewModelProvider(this).get(ExploreViewModel.class);
         View root = inflater.inflate(R.layout.fragment_explore, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        exploreViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        SectionsPagerAdapter explorePagerAdapter = new SectionsPagerAdapter(getContext(),getChildFragmentManager());
+        ViewPager viewPager = (ViewPager) root.findViewById(R.id.explore_viewpager);
+        viewPager.setAdapter(explorePagerAdapter);
+        TabLayout tab_explore = (TabLayout) root.findViewById(R.id.tab_explore);
+        tab_explore.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
         return root;
