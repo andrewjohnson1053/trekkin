@@ -16,10 +16,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
-import java.util.List;
-
 public class ImageAdapter extends FirebaseRecyclerAdapter<LocationCard, ImageAdapter.ImageViewHolder> {
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -33,10 +29,10 @@ public class ImageAdapter extends FirebaseRecyclerAdapter<LocationCard, ImageAda
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ImageViewHolder holder, int position, @NonNull LocationCard model) {
-        holder.textViewName.setText(model.getmName());
+    protected void onBindViewHolder(@NonNull ImageViewHolder holder, int position, @NonNull LocationCard card) {
+        holder.textViewName.setText(card.getLocationName());
         Picasso.with(mContext)
-                .load(model.getmImageUrl())
+                .load(card.getDisplayImageUrl())
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()
                 .into(holder.imageView);

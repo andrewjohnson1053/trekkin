@@ -3,8 +3,6 @@ package com.example.trekkin.ui.explore;
 import android.net.Uri;
 
 public class LocationCard {
-    private String mName;
-    private String mImageUrl;
 
     public LocationCard() {
         //Empty constructor needed for firebase connectivity.
@@ -14,23 +12,62 @@ public class LocationCard {
         if (name.trim().equals("")) {
             name = "No Name";
         }
-        mName = name;
-        mImageUrl = imageUrl.toString();
+        mLocationName = name;
+        mDisplayImageUrl = imageUrl.toString();
     }
 
-    public String getmName() {
-        return mName;
+    public String getLocationName() {
+        return mLocationName;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
+    public void setLocationName(String mLocationName) {
+        this.mLocationName = mLocationName;
     }
 
-    public String getmImageUrl() {
-        return mImageUrl;
+    public String getDisplayImageUrl() {
+        return mDisplayImageUrl;
     }
 
-    public void setmImageUrl(String mImageUrl) {
-        this.mImageUrl = mImageUrl;
+    public void setDisplayImageUrl(String mDisplayImageUrl) {
+        this.mDisplayImageUrl = mDisplayImageUrl;
     }
+
+    public String getRegionProvinceName() {
+        return mRegionProvinceName;
+    }
+
+    public void setRegionProvinceName(String mRegionProvinceName) {
+        this.mRegionProvinceName = mRegionProvinceName;
+    }
+
+    public int getNumberOfStars() {
+        return mNumberOfStars;
+    }
+
+    public void setNumberOfStars(int mNumberOfStars) {
+        this.mNumberOfStars = mNumberOfStars;
+    }
+
+    public boolean isStarred() {
+        return mIsStarred;
+    }
+
+    public void setIsStarred(boolean mIsStarred) {
+        this.mIsStarred = mIsStarred;
+    }
+
+    public String getId() {
+        return _Id;
+    }
+
+    public void setId(String _Id) {
+        this._Id = _Id;
+    }
+
+    private String mLocationName;
+    private String mDisplayImageUrl;
+    private String mRegionProvinceName;
+    private int mNumberOfStars;
+    private boolean mIsStarred;
+    private String _Id;
 }
